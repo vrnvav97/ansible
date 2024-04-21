@@ -1,0 +1,19 @@
+
+PLAY [Variables Playbook String_Boolean] ***************************************
+
+TASK [Print Tasks] *************************************************************
+ok: [localhost] => {
+    "msg": "Hello World False"
+}
+
+TASK [Second Print Tasks] ******************************************************
+ok: [localhost] => {
+    "string_variable": "This is string variable"
+}
+
+TASK [Conditional boolean_variable] ********************************************
+skipping: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+

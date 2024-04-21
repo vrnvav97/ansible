@@ -1,0 +1,21 @@
+---
+- name: Variables Playbook String_Boolean
+  hosts: localhost
+  become: true
+  gather_facts: false
+  vars:
+    string_variable: "This is string variable"
+    boolean_variable: false
+  tasks:
+    - name: Print Tasks
+      debug:
+        msg: "Hello World {{ boolean_variable }}"
+    
+    - name: Second Print Tasks
+      debug:
+        var: string_variable
+    
+    - name: Conditional boolean_variable
+      debug:
+        msg: "This will be printed if condition is true"
+      when: boolean_variable
