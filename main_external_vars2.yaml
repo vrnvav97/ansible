@@ -1,0 +1,10 @@
+---
+- name: External Vars File Example
+  hosts: localhost
+  gather_facts: no
+  vars_files:
+    - my_vars.yaml
+  tasks:
+    - name: Accessing External Vars
+      debug:
+        msg: "Value from External string_variable is : {{ string_variable }}"
