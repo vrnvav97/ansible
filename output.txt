@@ -1,0 +1,13 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Environment Variable Example] ********************************************
+
+TASK [Accessing Global Environment Vars] ***************************************
+changed: [localhost] => {"changed": true, "cmd": ["echo", "Java", "Version", "is", "${JAVA_VERSION}", "and", "Maven", "Path", "is", "${MAVEN_PATH}"], "delta": "0:00:00.003659", "end": "2024-04-21 13:43:53.988053", "msg": "", "rc": 0, "start": "2024-04-21 13:43:53.984394", "stderr": "", "stderr_lines": [], "stdout": "Java Version is 1.8 and Maven Path is /c/users/m2", "stdout_lines": ["Java Version is 1.8 and Maven Path is /c/users/m2"]}
+
+TASK [Local Task Level Environment Variable] ***********************************
+changed: [localhost] => {"changed": true, "cmd": ["echo", "Java", "Version", "is", "${JAVA_VERSION}", "and", "NODEJS", "Version", "is", "${NODEJS_VERSION}"], "delta": "0:00:00.003361", "end": "2024-04-21 13:43:54.172115", "msg": "", "rc": 0, "start": "2024-04-21 13:43:54.168754", "stderr": "", "stderr_lines": [], "stdout": "Java Version is 1.8 and NODEJS Version is 10.1", "stdout_lines": ["Java Version is 1.8 and NODEJS Version is 10.1"]}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

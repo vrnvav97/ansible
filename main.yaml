@@ -1,0 +1,15 @@
+---
+- name: Environment Variable Example
+  hosts: localhost
+  gather_facts: no
+  environment:
+    JAVA_VERSION: 1.8
+    MAVEN_PATH: /c/users/m2
+  tasks:
+    - name: Accessing Global Environment Vars
+      command: "echo Java Version is ${JAVA_VERSION} and Maven Path is ${MAVEN_PATH}"
+    - name: Local Task Level Environment Variable
+      environment:
+        NODEJS_VERSION: 10.1
+        NODEJS_PATH: /usr/share/nodejs
+      command: "echo Java Version is ${JAVA_VERSION} and NODEJS Version is ${NODEJS_VERSION}"
