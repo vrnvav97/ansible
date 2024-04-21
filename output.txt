@@ -1,0 +1,32 @@
+
+PLAY [Register Example] ********************************************************
+
+TASK [Executing on Machine] ****************************************************
+changed: [localhost]
+
+TASK [Output] ******************************************************************
+ok: [localhost] => {
+    "msg": {
+        "changed": true,
+        "cmd": [
+            "echo",
+            "Hello World True"
+        ],
+        "delta": "0:00:00.003398",
+        "end": "2024-04-21 12:28:41.052622",
+        "failed": false,
+        "msg": "",
+        "rc": 0,
+        "start": "2024-04-21 12:28:41.049224",
+        "stderr": "",
+        "stderr_lines": [],
+        "stdout": "Hello World True",
+        "stdout_lines": [
+            "Hello World True"
+        ]
+    }
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,14 @@
+---
+- name: Register Example
+  hosts: localhost
+  gather_facts: false
+  vars:
+    bool_var: true
+  tasks:
+    - name: Executing on Machine
+      command: echo "Hello World {{ bool_var }}"
+      register: command_output
+    
+    - name: Output
+      debug:
+        msg: "{{ command_output }}"
