@@ -10,6 +10,10 @@
       - grapes
       - kiwi
   tasks:
-    - name: Print Lists Variable
+    - name: Printing all values of List
       debug:
         var: fruits
+    - name: Print First Element of List Variable
+      debug:
+        var: fruits[0]
+

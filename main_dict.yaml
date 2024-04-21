@@ -1,0 +1,17 @@
+---
+- name: Dictionary Variable
+  hosts: localhost
+  gather_facts: false
+  vars:
+    fruits:
+      apply: 100
+      kiwi: 90
+      orange: 40
+      banana: 60
+  tasks:
+    - name: Printing all values of Dictionary
+      debug:
+        var: fruits
+    - name: Accessing particular key from Dictionary
+      debug:
+        msg: "This is bananas price {{ fruits.banana }}"
