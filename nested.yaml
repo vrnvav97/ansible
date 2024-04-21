@@ -1,0 +1,34 @@
+---
+- name: Nested variables
+  hosts: localhost
+  gather_facts: false
+  vars:
+    fruits:
+      apply: 100
+      kiwi: 90
+      orange: 40
+      banana: 60
+    fruit_basket:
+      - name: A
+        user_fruit:
+          - apple
+          - orange
+      - name: Z
+        user_fruit:
+          - kiwi
+          - grapes
+  tasks:
+    - name: Printing entire variable
+      debug:
+        var: fruit_basket
+    - name: Accessing Name for first
+      debug:
+        msg: "{{ fruit_basket[0]['name'] }}"
+    - name: Accessing First User first fruit
+      debug:
+        msg: "{{ fruit_basket[0]['user_fruit'][0] }}"
+    - name: Accessing Second User Second fruit using echo
+      command: "echo {{ fruit_basket[1]['user_fruit'][0] }}"
+      register: second_user_output
+    - debug:
+        msg: "Second user output {{ second_user_output.stdout }}. Price is {{ fruits[second_user_output.stdout] }}"

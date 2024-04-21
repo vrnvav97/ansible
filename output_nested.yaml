@@ -5,22 +5,40 @@ TASK [Printing entire variable] ************************************************
 ok: [localhost] => {
     "fruit_basket": [
         {
-            "fruits": [
+            "name": "A",
+            "user_fruit": [
                 "apple",
                 "orange"
-            ],
-            "name": "A"
+            ]
         },
         {
-            "fruits": [
+            "name": "Z",
+            "user_fruit": [
                 "kiwi",
                 "grapes"
-            ],
-            "name": "Z"
+            ]
         }
     ]
 }
 
+TASK [Accessing Name for first] ************************************************
+ok: [localhost] => {
+    "msg": "A"
+}
+
+TASK [Accessing First User first fruit] ****************************************
+ok: [localhost] => {
+    "msg": "apple"
+}
+
+TASK [Accessing Second User Second fruit using echo] ***************************
+changed: [localhost]
+
+TASK [debug] *******************************************************************
+ok: [localhost] => {
+    "msg": "Second user output kiwi. Price is 90"
+}
+
 PLAY RECAP *********************************************************************
-localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+localhost                  : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 
