@@ -12,6 +12,9 @@
     - name: Printing all values of Dictionary
       debug:
         var: fruits
-    - name: Accessing particular key from Dictionary
+    - name: Accessing particular key from Dictionary using dot notation
       debug:
         msg: "This is bananas price {{ fruits.banana }}"
+    - name: Accessing particular key from Dictionary using array notation
+      debug:
+        msg: "This is orange price {{ fruits['orange'] }}"
