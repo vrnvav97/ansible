@@ -1,0 +1,20 @@
+---
+- name: Handlers Example
+  hosts: localhost
+  gather_facts: false
+  vars:
+    bool_var: false
+  handlers:
+    - name: Final Block
+      debug:
+        msg: "Final Block Called"
+  tasks:
+    - name: Print Task
+      debug:
+        msg: "Print Task Executed"
+      changed_when: true
+      # when: bool_var
+      notify:
+        - Final Block
+
+

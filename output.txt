@@ -1,0 +1,16 @@
+
+PLAY [Handlers Example] ********************************************************
+
+TASK [Print Task] **************************************************************
+changed: [localhost] => {
+    "msg": "Print Task Executed"
+}
+
+RUNNING HANDLER [Final Block] **************************************************
+ok: [localhost] => {
+    "msg": "Final Block Called"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
