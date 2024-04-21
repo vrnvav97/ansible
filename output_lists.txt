@@ -1,0 +1,16 @@
+
+PLAY [List Variable] ***********************************************************
+
+TASK [Print Lists Variable] ****************************************************
+ok: [localhost] => {
+    "fruits": [
+        "apple",
+        "banana",
+        "grapes",
+        "kiwi"
+    ]
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
