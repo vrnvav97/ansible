@@ -1,0 +1,26 @@
+
+PLAY [Nested variables] ********************************************************
+
+TASK [Printing entire variable] ************************************************
+ok: [localhost] => {
+    "fruit_basket": [
+        {
+            "fruits": [
+                "apple",
+                "orange"
+            ],
+            "name": "A"
+        },
+        {
+            "fruits": [
+                "kiwi",
+                "grapes"
+            ],
+            "name": "Z"
+        }
+    ]
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
