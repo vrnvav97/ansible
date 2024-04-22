@@ -1,0 +1,12 @@
+---
+- name: Conditionals Example
+  hosts: localhost
+  tasks:
+    - name: Executing based on Conditionals
+      debug:  
+        msg: "Hi There"
+      when: ansible_facts['os_family'] == 'Debian'
+    - name: Executing Else Conditionals
+      debug:
+        msg: "OS Family is not Debian"
+      when: ansible_facts['os_family'] != 'Debian'

@@ -1,0 +1,22 @@
+---
+- name: Multiple Conditionals Example
+  hosts: localhost
+  tasks:
+    - name: Single Condition
+      debug:  
+        msg: "Single Condition"
+      when: ansible_facts['os_family'] == 'Debian'
+    - name: Else Single Condition
+      debug:
+        msg: "OS Family is not Debian"
+      when: ansible_facts['os_family'] != 'Debian'
+    - name: Multiple Conditionals
+      debug:
+        msg: "Multiple Conditionals Executed"
+      when: 
+        - ansible_facts['os_family'] == 'Debian'
+        - ansible_facts['pkg_mgr'] == 'apt'
+    - name: Multiple Conditionals In Single Line
+      debug:
+        msg: "Multiple Conditionals In Single Line"
+      when: ansible_facts['os_family'] == 'Debian' and ansible_facts['pkg_mgr'] == 'apt'    

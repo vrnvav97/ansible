@@ -1,0 +1,28 @@
+
+PLAY [Loop Example] ************************************************************
+
+TASK [Loop Example] ************************************************************
+ok: [localhost] => (item=0) => {
+    "msg": "I am Printed at 0"
+}
+ok: [localhost] => (item=1) => {
+    "msg": "I am Printed at 1"
+}
+ok: [localhost] => (item=2) => {
+    "msg": "I am Printed at 2"
+}
+ok: [localhost] => (item=3) => {
+    "msg": "I am Printed at 3"
+}
+ok: [localhost] => (item=4) => {
+    "msg": "I am Printed at 4"
+}
+ok: [localhost] => (item=5) => {
+    "msg": "I am Printed at 5"
+}
+skipping: [localhost] => (item=-1) 
+skipping: [localhost] => (item=-2) 
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

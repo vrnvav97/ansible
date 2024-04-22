@@ -1,0 +1,17 @@
+
+PLAY [Conditionals Example] ****************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [Executing based on Conditionals] *****************************************
+ok: [localhost] => {
+    "msg": "Hi There"
+}
+
+TASK [Executing Else Conditionals] *********************************************
+skipping: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+

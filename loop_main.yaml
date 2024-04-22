@@ -1,0 +1,10 @@
+---
+- name: Loop Example
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Loop Example
+      debug:
+        msg: "I am Printed at {{ item }}"
+      loop: [0,1,2,3,4,5,-1,-2]
+      when: item >= 0

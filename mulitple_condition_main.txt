@@ -1,0 +1,27 @@
+
+PLAY [Multiple Conditionals Example] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [Single Condition] ********************************************************
+ok: [localhost] => {
+    "msg": "Single Condition"
+}
+
+TASK [Else Single Condition] ***************************************************
+skipping: [localhost]
+
+TASK [Multiple Conditionals] ***************************************************
+ok: [localhost] => {
+    "msg": "Multiple Conditionals Executed"
+}
+
+TASK [Multiple Conditionals In Single Line] ************************************
+ok: [localhost] => {
+    "msg": "Multiple Conditionals In Single Line"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+
