@@ -1,0 +1,10 @@
+---
+- name: Ansible Facts Example
+  hosts: localhost
+  tasks:
+    - name: Print Ansible Facts
+      debug:
+        var: ansible_facts
+    - name: Print OS family from Ansible Facts
+      debug:
+        msg: "{{ ansible_facts['os_family'] }}"
