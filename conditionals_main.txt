@@ -1,0 +1,19 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Loop Example 2] **********************************************************
+
+TASK [Loop Example with another Module] ****************************************
+skipping: [localhost] => (item=0)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 0, "skip_reason": "Conditional result was False"}
+skipping: [localhost] => (item=1)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 1, "skip_reason": "Conditional result was False"}
+skipping: [localhost] => (item=2)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 2, "skip_reason": "Conditional result was False"}
+skipping: [localhost] => (item=3)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 3, "skip_reason": "Conditional result was False"}
+skipping: [localhost] => (item=4)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 4, "skip_reason": "Conditional result was False"}
+skipping: [localhost] => (item=5)  => {"ansible_loop_var": "item", "changed": false, "false_condition": "item > 5", "item": 5, "skip_reason": "Conditional result was False"}
+changed: [localhost] => (item=6) => {"ansible_loop_var": "item", "changed": true, "cmd": ["echo", "@", "6"], "delta": "0:00:00.003712", "end": "2024-04-22 10:43:51.906960", "item": 6, "msg": "", "rc": 0, "start": "2024-04-22 10:43:51.903248", "stderr": "", "stderr_lines": [], "stdout": "@ 6", "stdout_lines": ["@ 6"]}
+changed: [localhost] => (item=7) => {"ansible_loop_var": "item", "changed": true, "cmd": ["echo", "@", "7"], "delta": "0:00:00.003475", "end": "2024-04-22 10:43:52.087069", "item": 7, "msg": "", "rc": 0, "start": "2024-04-22 10:43:52.083594", "stderr": "", "stderr_lines": [], "stdout": "@ 7", "stdout_lines": ["@ 7"]}
+changed: [localhost] => (item=7) => {"ansible_loop_var": "item", "changed": true, "cmd": ["echo", "@", "7"], "delta": "0:00:00.004032", "end": "2024-04-22 10:43:52.270780", "item": 7, "msg": "", "rc": 0, "start": "2024-04-22 10:43:52.266748", "stderr": "", "stderr_lines": [], "stdout": "@ 7", "stdout_lines": ["@ 7"]}
+changed: [localhost] => (item=8) => {"ansible_loop_var": "item", "changed": true, "cmd": ["echo", "@", "8"], "delta": "0:00:00.003597", "end": "2024-04-22 10:43:52.450987", "item": 8, "msg": "", "rc": 0, "start": "2024-04-22 10:43:52.447390", "stderr": "", "stderr_lines": [], "stdout": "@ 8", "stdout_lines": ["@ 8"]}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

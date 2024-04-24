@@ -1,0 +1,20 @@
+---
+- name: Logical Operators Example
+  hosts: localhost
+  tasks:
+    - name: OR Logical Operators Example
+      debug:
+        msg: "Hi I am Printed with OR Logical operator"
+      when: ansible_facts['os_family'] == 'RHEL' or ansible_facts['pkg_mgr'] == 'apt'
+    - name: And Logical Operators Example
+      debug:
+        msg: "Hi I am Printed because os_family is RHEL and package manager is apt"
+      when: ansible_facts['os_family'] == 'RHEL' and ansible_facts['pkg_mgr'] == 'apt'
+    - name: And Logical Operators Example
+      debug:
+        msg: "Hi I am Printed os_family is Debian and package manager is apt"
+      when: ansible_facts['os_family'] == 'Debian' and ansible_facts['pkg_mgr'] == 'apt'
+    - name: OR Logical Operators Example
+      debug:
+        msg: "Hi I am Printed os_family is Debian or package manager is yum"
+      when: ansible_facts['os_family'] == 'Debian' or ansible_facts['pkg_mgr'] == 'yum'

@@ -1,0 +1,28 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAY [Logical Operators Example] ***********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [OR Logical Operators Example] ********************************************
+ok: [localhost] => {
+    "msg": "Hi I am Printed with OR Logical operator"
+}
+
+TASK [And Logical Operators Example] *******************************************
+skipping: [localhost] => {"false_condition": "ansible_facts['os_family'] == 'RHEL' and ansible_facts['pkg_mgr'] == 'apt'"}
+
+TASK [And Logical Operators Example] *******************************************
+ok: [localhost] => {
+    "msg": "Hi I am Printed os_family is Debian and package manager is apt"
+}
+
+TASK [OR Logical Operators Example] ********************************************
+ok: [localhost] => {
+    "msg": "Hi I am Printed os_family is Debian or package manager is yum"
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+
