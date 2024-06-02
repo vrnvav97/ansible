@@ -1,0 +1,13 @@
+---
+- name: Custom Module Example
+  hosts: localhost
+  gather_facts: no
+  tasks:
+  - name: test_modules
+    my_test:
+      name: "Muskan"
+      new: true
+    register: out
+  - name: Printing
+    debug: 
+      msg: "{{ out }}"
