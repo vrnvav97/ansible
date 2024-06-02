@@ -1,0 +1,7 @@
+---
+- name: Callback plugin test
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Ping tasks
+      ping:

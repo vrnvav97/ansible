@@ -1,0 +1,3 @@
+[0;0m[s[2K[u[0;0m[2K[1mPLAY 1: CALLBACK PLUGIN TEST[u[0;0m
+[s[2K[u[0;0m[4mtask 1.[0;0m[u[0;0m[2K[7l[4mtask 1:[0;0m [0;32mlocalhost[0;0m[7h[u[0;0m[2K[u[0;0m
+[s[2K
